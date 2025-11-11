@@ -16,5 +16,11 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Executar script
+      - name: Instalar dependências
+        run: pip install pytest
+
+      - name: Executar script principal
         run: python main.py
+
+      - name: Executar testes
+        run: pytest -v
